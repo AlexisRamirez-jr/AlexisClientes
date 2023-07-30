@@ -3,9 +3,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace Models.Models
+namespace Core.Entities
 {
-    public partial class Cliente
+    public partial class Clientes
     {
         public int Identificación { get; set; }
         public string PrimerNombre { get; set; }
