@@ -1,6 +1,6 @@
 
 
--- nombre del server local
+-- nombre del server local para Mi
 -- DESKTOP-3MKH7IC\SQLEXPRESS 
 
 create database ClientesTestACF

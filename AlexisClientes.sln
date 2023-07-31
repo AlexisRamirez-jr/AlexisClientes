@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{4EE706AA-19DE-420C-8677-03828E203131}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{4EE706AA-19DE-420C-8677-03828E203131}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACF.Clientes.Api", "ACF.Clientes.Api\ACF.Clientes.Api.csproj", "{26813EE0-D658-42F2-82C6-B8FA4FF76857}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACF.Clientes.Api", "ACF.Clientes.Api\ACF.Clientes.Api.csproj", "{26813EE0-D658-42F2-82C6-B8FA4FF76857}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACF.WebPage", "ACF.WebPage\ACF.WebPage.csproj", "{0961F7A1-BE1D-4A8A-AF42-69AE188109AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACF.WebPage", "ACF.WebPage\ACF.WebPage.csproj", "{0961F7A1-BE1D-4A8A-AF42-69AE188109AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACF.Infrastructure", "ACF.Infrastructure\ACF.Infrastructure.csproj", "{383DA8D8-C185-47E0-94F5-E50B8885E5B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACF.Infrastructure", "ACF.Infrastructure\ACF.Infrastructure.csproj", "{383DA8D8-C185-47E0-94F5-E50B8885E5B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "Clientes";
+}
+<h1>Clientes</h1>
+<hr />
+<div class="container text-center">
+    <div class="row align-items-start">
+        <div class="col">
+            <button type="button" id="CrearCliente" class="btn btn-outline-success">Crear</button>
+        </div>
+        <div class="col">
+            <button type="button" id="LsClientes" class="btn btn-outline-success">Listado de Clientes</button>
+        </div>
+    </div>
+</div>
+<div id="partialSelected" class="shadow-none p-3 mb-5 bg-body-tertiary rounded text-center mt-3">
+</div>
+
+
+
+<script type="text/javascript">
+    $('#CrearCliente').click(function (e) {
+        $('#partialSelected').load('/Cliente/CrearPartial');
+    });
+    $('#LsClientes').click(function (e) {
+        $('#partialSelected').load('/Cliente/LstClientePartial');
+    });
+</script>

@@ -60,7 +60,7 @@ namespace ApiProductos.Controllers.Product
             });
         }
 
-        [HttpPatch("EliminarCliente")]
+        [HttpDelete("EliminarCliente")]
         public async Task<IActionResult> EliminarCliente(int identificación)
         {
 

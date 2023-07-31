@@ -1,0 +1,49 @@
+﻿<h1>Listado clientes</h1>
+@model IEnumerable<ACF.WebPage.Models.ClienteDataViewModel>
+@{
+    ViewData["Title"] = "LstCliente";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Identificación
+            </th>
+            <th>
+                Primer Nombre
+            </th>
+            <th>
+                Primer Apellido
+            </th>
+            <th>
+                Fecha de Registro
+            </th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Identificación)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrimerNombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrimerApellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaDeCreación)
+                </td>
+
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Identificación">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Identificación">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
