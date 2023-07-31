@@ -2,11 +2,13 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Core.Entities
 {
     public partial class Clientes
     {
+        [Key]
         public int Identificación { get; set; }
         public string PrimerNombre { get; set; }
         public string PrimerApellido { get; set; }

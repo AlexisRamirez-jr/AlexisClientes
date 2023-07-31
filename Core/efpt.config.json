@@ -1,18 +1,18 @@
 ﻿{
    "CodeGenerationMode": 2,
-   "ContextClassName": "ACFContext",
+   "ContextClassName": "ClientesTestACFContext",
    "ContextNamespace": null,
    "DefaultDacpacSchema": null,
    "FilterSchemas": false,
    "IncludeConnectionString": false,
    "ModelNamespace": null,
    "OutputContextPath": null,
-   "OutputPath": "Data",
+   "OutputPath": "Entities",
    "PreserveCasingWithRegex": true,
-   "ProjectRootNamespace": "ACF.Infrastructure",
+   "ProjectRootNamespace": "Core",
    "Schemas": null,
    "SelectedHandlebarsLanguage": 0,
-   "SelectedToBeGenerated": 1,
+   "SelectedToBeGenerated": 2,
    "Tables": [
       {
          "Name": "[dbo].[Clientes]",
