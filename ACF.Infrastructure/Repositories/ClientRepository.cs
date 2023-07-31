@@ -25,7 +25,14 @@ namespace ACF.Infrastructure.Repositories
         {
             return await _iClientsServices.Registrar(cliente);
         }
-
+        public async Task<Clientes> Actualizar(Clientes cliente)
+        {
+            return await _iClientsServices.Actualizar(cliente);
+        }
+        public async Task<Clientes> GetClient(int id)
+        {
+            return await _iClientsServices.GetClient(id);
+        }
         public async Task<List<Clientes>> GetClients()
         {
             return await _iClientsServices.GetClients();

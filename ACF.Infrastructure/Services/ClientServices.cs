@@ -26,7 +26,8 @@ namespace ACF.Infrastructure.Services
         #region METHODS
         public async Task<Clientes> Registrar(ClienteDTO cliente)
         {
-            Clientes savedClient = new Clientes() { 
+            Clientes savedClient = new Clientes()
+            {
                 PrimerNombre = cliente.PrimerNombre,
                 PrimerApellido = cliente.PrimerApellido,
                 Edad = cliente.Edad,
@@ -39,6 +40,26 @@ namespace ACF.Infrastructure.Services
 
             return query.Entity;
         }
+        public async Task<Clientes> Actualizar(Clientes cliente)
+        {
+
+
+
+            var query = _persistenceContext.Clientes.Update(cliente);
+
+            _persistenceContext.SaveChanges();
+
+            return query.Entity;
+        }
+
+        public async Task<Clientes> GetClient(int id)
+        {
+            var getclient = _persistenceContext.Clientes
+                            .Where(ro => ro.Identificación == id).FirstOrDefault();
+
+            return getclient;
+        }
+
         public async Task<List<Clientes>> GetClients()
         {
             List<Clientes> query = await _persistenceContext.Clientes.ToListAsync();

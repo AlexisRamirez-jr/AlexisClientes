@@ -8,6 +8,8 @@ namespace ACF.Infrastructure.Interfaces.IServices
     public interface IClientServices
     {
         Task<Clientes> Registrar(ClienteDTO cliente);
+        Task<Clientes> Actualizar(Clientes cliente);
+        Task<Clientes> GetClient(int id);
         Task<List<Clientes>> GetClients();
     }
 }

@@ -8,6 +8,8 @@ namespace ACF.Infrastructure.Interfaces.IRepositories
     public interface IClientRepository
     {
         Task<Clientes> Registrar(ClienteDTO cliente);
+        Task<Clientes> Actualizar(Clientes cliente);
+        Task<Clientes> GetClient(int id);
         Task<List<Clientes>> GetClients();
     }
 }

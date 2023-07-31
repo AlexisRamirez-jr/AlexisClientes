@@ -34,6 +34,32 @@ namespace ApiProductos.Controllers.Product
             });
         }
 
+        [HttpPatch("ActualizarCliente")]
+        public async Task<IActionResult> ActualizarCliente(UpdateClientDTO cliente)
+        {
+
+            Clientes getclient = await _iProductRepository.GetClient(cliente.Identificación);
+            if (getclient == null)
+            {
+                return Ok(new { Code = StatusCodes.Status404NotFound, Message = "No se encontro el cliente" });
+            }
+            getclient.PrimerNombre = cliente.PrimerNombre;
+            getclient.PrimerApellido = cliente.PrimerApellido;
+            getclient.Edad = cliente.Edad;
+
+            Clientes result = await _iProductRepository.Actualizar(getclient);
+
+            if (result == null)
+            {
+                return Ok(new { Code = StatusCodes.Status404NotFound, Message = "No se encontro el cliente" });
+            }
+            return Ok(new
+            {
+                Code = 1,
+                Data = result
+            });
+        }
+
         [HttpGet("ObtenerClientes")]
         public async Task<IActionResult> ObtenerClientes()
         {
