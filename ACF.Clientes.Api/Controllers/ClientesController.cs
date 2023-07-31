@@ -60,6 +60,30 @@ namespace ApiProductos.Controllers.Product
             });
         }
 
+        [HttpPatch("EliminarCliente")]
+        public async Task<IActionResult> EliminarCliente(int identificación)
+        {
+
+            Clientes getclient = await _iProductRepository.GetClient(identificación);
+            if (getclient == null)
+            {
+                return Ok(new { Code = StatusCodes.Status404NotFound, Message = "No se encontro el cliente" });
+            }
+
+            bool result = await _iProductRepository.Eliminar(getclient);
+
+            if (!result)
+            {
+                return Ok(new { Code = StatusCodes.Status404NotFound, Message = "Error Inesperado, registro no eliminado" });
+            }
+
+            return Ok(new
+            {
+                Code = 1,
+                Data = getclient
+            });
+        }
+
         [HttpGet("ObtenerClientes")]
         public async Task<IActionResult> ObtenerClientes()
         {

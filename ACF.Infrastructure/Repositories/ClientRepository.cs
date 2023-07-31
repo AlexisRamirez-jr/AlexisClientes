@@ -33,6 +33,10 @@ namespace ACF.Infrastructure.Repositories
         {
             return await _iClientsServices.GetClient(id);
         }
+        public async Task<bool> Eliminar(Clientes cliente)
+        {
+            return await _iClientsServices.Eliminar(cliente);
+        }        
         public async Task<List<Clientes>> GetClients()
         {
             return await _iClientsServices.GetClients();

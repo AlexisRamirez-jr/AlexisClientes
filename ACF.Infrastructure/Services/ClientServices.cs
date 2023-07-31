@@ -60,14 +60,19 @@ namespace ACF.Infrastructure.Services
             return getclient;
         }
 
+        public async Task<bool> Eliminar(Clientes cliente)
+        {
+            var query = _persistenceContext.Clientes.Remove(cliente);
+
+            _persistenceContext.SaveChanges();
+
+            return true;
+        }
+
         public async Task<List<Clientes>> GetClients()
         {
             List<Clientes> query = await _persistenceContext.Clientes.ToListAsync();
-            //List<ClientesViewModel> lstProducts = query.Select(x => new ClientesViewModel()
-            //{
-            //    Nombre = x.Roles.Name,
-            //    Apellido = x.Products.Name
-            //}).ToList();
+
             return query;
         }
         #endregion
